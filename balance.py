@@ -34,7 +34,7 @@ class Balance:
         return "Транзакция добавлена."
 
     @staticmethod
-    def update_transaction(df) -> str:
+    def update_transaction(df, csv_name) -> str:
         """Вносит изменения в существующую запись"""
 
         print("\nТранзакцию за какое число вы хотите редактировать?")
@@ -53,7 +53,7 @@ class Balance:
         df.loc[id, "summ"] = summ
         describe = Validate.validation_describe()
         df.loc[id, "describe"] = describe
-        df.to_csv("transactions.csv", index=False)
+        df.to_csv(csv_name, index=False)
         return "Транзакция сохранена."
     
     @staticmethod

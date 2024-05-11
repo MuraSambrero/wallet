@@ -26,11 +26,11 @@ class ServicesWallet:
         print(result_append)
 
     @staticmethod
-    def update_transaction(df) -> str:
+    def update_transaction(df, csv_name) -> str:
         """Данная функция необоходима для редактирования
         данных по определенным транзакциям
         """
-        result_update = Balance.update_transaction(df)
+        result_update = Balance.update_transaction(df, csv_name)
         print(result_update)
 
     @staticmethod

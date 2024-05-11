@@ -24,7 +24,7 @@ def welcome_user() -> str:
     elif request_answer == "2":
         ServicesWallet.append_transaction()
     elif request_answer == "3":
-        ServicesWallet.update_transaction(df)
+        ServicesWallet.update_transaction(df, csv_name)
     elif request_answer == "4":
         ServicesWallet.search_transactions(df)
     else:
